@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
         <li> <%= current_user.name%> - <%= image_tag(@auth['info']['image'], width: '50', heigth: '50', class: 'img-circle')%> </li>
-        <li><% link_to "Sair", 'sign_out', method: :delete %></li>
+        <li><%= link_to "Sair", 'sign_out', method: :delete %></li>
         <% else %>
           <li> <%= link_to "auth/facebook" do %>
               <%= fa_stacked_icon "facebook", base: "square-o" %>
